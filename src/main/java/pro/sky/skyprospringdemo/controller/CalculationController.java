@@ -10,6 +10,7 @@ import pro.sky.skyprospringdemo.service.CalculationService;
 @RestController
 @RequestMapping("/calculator")
 public class CalculationController {
+
     @Autowired
     public CalculationController(CalculationService calculationService) {
         this.calculationService = calculationService;
