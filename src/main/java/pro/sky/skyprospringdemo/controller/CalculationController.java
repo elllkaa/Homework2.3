@@ -17,27 +17,27 @@ public class CalculationController {
     private final CalculationService calculationService;
 
     public String welcome() {
-        return calculatorServiseInterface.welcome();
+        return calculationService.welcome();
     }
 
     @GetMapping("/plus")
-    public Integer plus(@RequestParam Integer num1, @RequestParam Integer num2) {
+    public String plus(@RequestParam Integer num1, @RequestParam Integer num2) {
         return calculationService.plus(num1, num2);
     }
 
     @GetMapping("/minus")
-    public String resultMinus(@RequestParam("num1") String num1, @RequestParam("num2") String num2) {
-        return calculatorServiseInterface.resultMinus(num1, num2);
+    public String minus (@RequestParam("num1") String num1, @RequestParam("num2") String num2) {
+        return calculationService.minus(num1, num2);
     }
 
     @GetMapping("/multiply")
-    public String resultMultiply(@RequestParam("num1") String num1, @RequestParam("num2") String num2) {
-        return calculatorServiseInterface.resultMultiply(num1, num2);
+    public String multiply (@RequestParam("num1") String num1, @RequestParam("num2") String num2) {
+        return calculationService.multiply(num1, num2);
     }
 
     @GetMapping("/divide")
-    public String resultDivade(@RequestParam("num1") String num1, @RequestParam("num2") String num2) {
-        return calculatorServiseInterface.resultDivide(num1, num2);
+    public String divide (@RequestParam("num1") String num1, @RequestParam("num2") String num2) {
+        return calculationService.divide(num1, num2);
     }
 
 }
