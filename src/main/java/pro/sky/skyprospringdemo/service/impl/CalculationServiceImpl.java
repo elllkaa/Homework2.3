@@ -5,7 +5,7 @@ import pro.sky.skyprospringdemo.service.CalculationService;
 
 @Service
 public abstract class CalculationServiceImpl implements CalculationService {
-
+    
     @Override
     public String welcome() {
         return "Добро пожаловать в калькулятор";
