@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 import pro.sky.skyprospringdemo.service.CalculationService;
 
 @Service
-public abstract class CalculationServiceImpl implements CalculationService {
+public class CalculationServiceImpl implements CalculationService {
     
     @Override
     public String welcome() {

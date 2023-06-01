@@ -10,7 +10,6 @@ import pro.sky.skyprospringdemo.service.CalculationService;
 @RestController
 @RequestMapping("/calculator")
 public class CalculationController {
-
     @Autowired
     public CalculationController(CalculationService calculationService) {
         this.calculationService = calculationService;
@@ -27,17 +26,17 @@ public class CalculationController {
     }
 
     @GetMapping("/minus")
-    public String minus (@RequestParam("num1") String num1, @RequestParam("num2") String num2) {
+    public String minus (@RequestParam("num1") Integer num1, @RequestParam("num2") Integer num2) {
         return calculationService.minus(num1, num2);
     }
 
     @GetMapping("/multiply")
-    public String multiply (@RequestParam("num1") String num1, @RequestParam("num2") String num2) {
+    public String multiply (@RequestParam("num1") Integer num1, @RequestParam("num2") Integer num2) {
         return calculationService.multiply(num1, num2);
     }
 
     @GetMapping("/divide")
-    public String divide (@RequestParam("num1") String num1, @RequestParam("num2") String num2) {
+    public String divide (@RequestParam("num1") Integer num1, @RequestParam("num2") Integer num2) {
         return calculationService.divide(num1, num2);
     }
 
